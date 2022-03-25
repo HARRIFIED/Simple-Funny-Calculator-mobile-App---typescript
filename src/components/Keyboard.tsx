@@ -1,0 +1,318 @@
+import React from "react";
+import {
+  View,
+  Text,
+  Dimensions,
+  StyleSheet,
+  ScrollView,
+  Pressable,
+} from "react-native";
+
+const windowWidth = Dimensions.get("window").width;
+const windowHeight = Dimensions.get("window").height;
+
+export default function Keyboard() {
+  return (
+    <View
+      style={{
+        flexDirection: "row",
+        height: windowHeight / 1.4,
+      }}
+    >
+      <ScrollView
+        style={{
+          width: windowWidth / 1.6,
+          backgroundColor: "#1b1b1c",
+        }}
+      >
+        <View
+          style={{
+            flexDirection: "row",
+            marginTop: 40,
+            justifyContent: "space-around",
+          }}
+        >
+          <Pressable
+            style={({ pressed }) => [
+              {
+                backgroundColor: pressed ? "#434345" : "#1b1b1c",
+                width: 60,
+                height: 60,
+                borderRadius: 60,
+              },
+            ]}
+          >
+            <Text style={styles.text}>7</Text>
+          </Pressable>
+          <Pressable
+            style={({ pressed }) => [
+              {
+                backgroundColor: pressed ? "#434345" : "#1b1b1c",
+                width: 60,
+                height: 60,
+                borderRadius: 60,
+              },
+            ]}
+          >
+            <Text style={styles.text}>8</Text>
+          </Pressable>
+          <Pressable
+            style={({ pressed }) => [
+              {
+                backgroundColor: pressed ? "#434345" : "#1b1b1c",
+                width: 60,
+                height: 60,
+                borderRadius: 60,
+              },
+            ]}
+          >
+            <Text style={styles.text}>9</Text>
+          </Pressable>
+        </View>
+
+        <View
+          style={{
+            flexDirection: "row",
+            marginTop: 60,
+            justifyContent: "space-around",
+          }}
+        >
+          <Pressable
+            style={({ pressed }) => [
+              {
+                backgroundColor: pressed ? "#434345" : "#1b1b1c",
+                width: 60,
+                height: 60,
+                borderRadius: 60,
+              },
+            ]}
+          >
+            <Text style={styles.text}>4</Text>
+          </Pressable>
+          <Pressable
+            style={({ pressed }) => [
+              {
+                backgroundColor: pressed ? "#434345" : "#1b1b1c",
+                width: 60,
+                height: 60,
+                borderRadius: 60,
+              },
+            ]}
+          >
+            <Text style={styles.text}>5</Text>
+          </Pressable>
+          <Pressable
+            style={({ pressed }) => [
+              {
+                backgroundColor: pressed ? "#434345" : "#1b1b1c",
+                width: 60,
+                height: 60,
+                borderRadius: 60,
+              },
+            ]}
+          >
+            <Text style={styles.text}>6</Text>
+          </Pressable>
+        </View>
+
+        <View
+          style={{
+            flexDirection: "row",
+            marginTop: 60,
+            justifyContent: "space-around",
+          }}
+        >
+          <Pressable
+            style={({ pressed }) => [
+              {
+                backgroundColor: pressed ? "#434345" : "#1b1b1c",
+                width: 60,
+                height: 60,
+                borderRadius: 60,
+              },
+            ]}
+          >
+            <Text style={styles.text}>1</Text>
+          </Pressable>
+          <Pressable
+            style={({ pressed }) => [
+              {
+                backgroundColor: pressed ? "#434345" : "#1b1b1c",
+                width: 60,
+                height: 60,
+                borderRadius: 60,
+              },
+            ]}
+          >
+            <Text style={styles.text}>2</Text>
+          </Pressable>
+          <Pressable
+            style={({ pressed }) => [
+              {
+                backgroundColor: pressed ? "#434345" : "#1b1b1c",
+                width: 60,
+                height: 60,
+                borderRadius: 60,
+              },
+            ]}
+          >
+            <Text style={styles.text}>3</Text>
+          </Pressable>
+        </View>
+
+        <View
+          style={{
+            flexDirection: "row",
+            marginTop: 60,
+            justifyContent: "space-around",
+          }}
+        >
+          <Pressable
+            style={({ pressed }) => [
+              {
+                backgroundColor: pressed ? "#434345" : "#1b1b1c",
+                width: 60,
+                height: 60,
+                borderRadius: 60,
+              },
+            ]}
+          >
+            <Text style={styles.text}>.</Text>
+          </Pressable>
+          <Pressable
+            style={({ pressed }) => [
+              {
+                backgroundColor: pressed ? "#434345" : "#1b1b1c",
+                width: 60,
+                height: 60,
+                borderRadius: 60,
+              },
+            ]}
+          >
+            <Text style={styles.text}>0</Text>
+          </Pressable>
+          <Pressable
+            style={({ pressed }) => [
+              {
+                backgroundColor: pressed ? "#434345" : "#1b1b1c",
+                width: 60,
+                height: 60,
+                borderRadius: 60,
+              },
+            ]}
+          >
+            <Text style={styles.text}>=</Text>
+          </Pressable>
+        </View>
+      </ScrollView>
+
+      <View
+        style={{
+          width: windowWidth / 4.5,
+          backgroundColor: "#212120",
+        }}
+      >
+        <Pressable
+          style={({ pressed }) => [
+            {
+              backgroundColor: pressed ? "#434345" : "#212120",
+              width: 60,
+              height: 60,
+              borderRadius: 60,
+              marginTop: 44,
+              marginLeft: 15,
+            },
+          ]}
+        >
+          <Text style={styles.text2}>DEL</Text>
+        </Pressable>
+
+        <Pressable
+          style={({ pressed }) => [
+            {
+              backgroundColor: pressed ? "#434345" : "#212120",
+              width: 60,
+              height: 60,
+              borderRadius: 60,
+              marginTop: 30,
+              marginLeft: 15,
+            },
+          ]}
+        >
+          <Text style={styles.text3}>÷</Text>
+        </Pressable>
+
+        <Pressable
+          style={({ pressed }) => [
+            {
+              backgroundColor: pressed ? "#434345" : "#212120",
+              width: 60,
+              height: 60,
+              borderRadius: 60,
+              marginTop: 30,
+              marginLeft: 15,
+            },
+          ]}
+        >
+          <Text style={styles.text3}>×</Text>
+        </Pressable>
+
+        <Pressable
+          style={({ pressed }) => [
+            {
+              backgroundColor: pressed ? "#434345" : "#212120",
+              width: 60,
+              height: 60,
+              borderRadius: 60,
+              marginTop: 30,
+              marginLeft: 15,
+            },
+          ]}
+        >
+          <Text style={styles.text3}>-</Text>
+        </Pressable>
+
+        <Pressable
+          style={({ pressed }) => [
+            {
+              backgroundColor: pressed ? "#434345" : "#212120",
+              width: 60,
+              height: 60,
+              borderRadius: 60,
+              marginTop: 30,
+              marginLeft: 15,
+            },
+          ]}
+        >
+          <Text style={styles.text3}>+</Text>
+        </Pressable>
+      </View>
+
+      <ScrollView
+        style={{
+          backgroundColor: "#b05d04",
+        }}
+      ></ScrollView>
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  text: {
+    color: "#aba6a6",
+    fontSize: 35,
+    textAlign: "center",
+  },
+
+  text2: {
+    color: "#b05d04",
+    fontSize: 18,
+    textAlign: "center",
+  },
+
+  text3: {
+    color: "#b05d04",
+    fontSize: 33,
+    textAlign: "center",
+  },
+});
