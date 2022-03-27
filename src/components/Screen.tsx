@@ -1,24 +1,26 @@
-import React from "react";
-import {
-  View,
-  Text,
-  Dimensions,
-  Image,
-  TextInput,
-  Pressable,
-} from "react-native";
+import React, { useState } from "react";
+import { View, Text, Dimensions, Image, TextInput } from "react-native";
+import { useSelector } from "react-redux";
+import { CALCULATOR_REDUCER } from "../redux/calculator/reducers/calculatorReducer";
 
 const windowWidth = Dimensions.get("window").width;
-const windowHeight = Dimensions.get("window").height;
+// const windowHeight = Dimensions.get("window").height;
 
 export default function Screen(props: any) {
   const { screenHeight } = props;
+  const viewResult = useSelector((state: any) => {
+    return state[CALCULATOR_REDUCER];
+  });
 
+  const [text, onChangeText] = useState("");
+
+  
   return (
     <View
       style={{
         backgroundColor: "black",
         height: screenHeight,
+        width: windowWidth,
       }}
     >
       <View
@@ -44,12 +46,26 @@ export default function Screen(props: any) {
         />
       </View>
 
-      <View style={{ marginLeft: 229, marginTop: 15 }}>
-        <Text style={{ color: "white", fontSize: 50 }}>500+2</Text>
-      </View>
+      {/* <View style={{ marginLeft: 229, marginTop: 15 }}>
+        <Text style={{ color: "white", fontSize: 50 }}>{viewResult.value}</Text>
+      </View> */}
+      <TextInput
+        style={{
+          marginTop: 15,
+          fontSize: 50,
+          color: "white",
+          textAlign: "right",
+          marginRight: 10,
+        }}
+        onChangeText={onChangeText}
+        value={viewResult.value}
+        placeholder=""
+      />
 
-      <View style={{ marginLeft: 300, marginTop: 10 }}>
-        <Text style={{ color: "#aba6a6", fontSize: 35 }}>502</Text>
+      <View style={{ marginTop: 10, marginRight: 10 }}>
+        <Text style={{ color: "#aba6a6", fontSize: 35, textAlign: "right" }}>
+          {viewResult.result}
+        </Text>
       </View>
     </View>
   );
