@@ -1,7 +1,7 @@
 import { actionsTypes } from "../actions/actionsTypes";
 import { Action } from "../actions/actions";
 
-export const CALCULATOR_REDUCER = 'calculator_reducer'
+export const CALCULATOR_REDUCER = 'calculator_reducer';
 
 const initialState = {
   value: "",
