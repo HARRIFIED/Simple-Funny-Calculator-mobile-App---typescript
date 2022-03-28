@@ -5,11 +5,11 @@ interface get_results {
   payload: any;
 }
 
-export function get_result(result: string):get_results {
+export function get_result(result: string): get_results {
   return {
     type: actionsTypes.GET_RESULTS,
-    payload: result
-  }
+    payload: result,
+  };
 }
 interface load_button {
   type: actionsTypes.LOAD_BUTTON;
@@ -19,11 +19,11 @@ interface load_button {
 export function load_buttons(value: string): load_button {
   return {
     type: actionsTypes.LOAD_BUTTON,
-    payload: value
-  }
+    payload: value,
+  };
 }
 
-interface delete_action{
+interface delete_action {
   type: actionsTypes.DELETE_ACTION;
   payload?: any;
 }
@@ -31,8 +31,7 @@ interface delete_action{
 export function delete_value(): delete_action {
   return {
     type: actionsTypes.DELETE_ACTION,
-    
-  }
+  };
 }
 
 interface clear_screen {
@@ -40,12 +39,10 @@ interface clear_screen {
   payload?: any;
 }
 
-export function clear_screen(value: string):clear_screen {
+export function clear_screen(): clear_screen {
   return {
     type: actionsTypes.CLEAR_SCREEN,
-    payload: value
-  }
+  };
 }
-
 
 export type Action = get_results | load_button | delete_action | clear_screen;

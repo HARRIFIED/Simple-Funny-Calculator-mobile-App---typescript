@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { View, Text, Dimensions, Image, TextInput } from "react-native";
 import { useSelector } from "react-redux";
 import { CALCULATOR_REDUCER } from "../redux/calculator/reducers/calculatorReducer";
@@ -12,9 +12,8 @@ export default function Screen(props: any) {
     return state[CALCULATOR_REDUCER];
   });
 
-  const [text, onChangeText] = useState("");
+  // const [text, onChangeText] = useState("");
 
-  
   return (
     <View
       style={{
@@ -46,21 +45,11 @@ export default function Screen(props: any) {
         />
       </View>
 
-      {/* <View style={{ marginLeft: 229, marginTop: 15 }}>
-        <Text style={{ color: "white", fontSize: 50 }}>{viewResult.value}</Text>
-      </View> */}
-      <TextInput
-        style={{
-          marginTop: 15,
-          fontSize: 50,
-          color: "white",
-          textAlign: "right",
-          marginRight: 10,
-        }}
-        onChangeText={onChangeText}
-        value={viewResult.value}
-        placeholder=""
-      />
+      <View style={{ marginTop: 15, marginRight: 10 }}>
+        <Text style={{ color: "white", fontSize: 50, textAlign: "right" }}>
+          {(viewResult.value).length > 13 ? "ahh!! 😫😏" : viewResult.value}
+        </Text>
+      </View>
 
       <View style={{ marginTop: 10, marginRight: 10 }}>
         <Text style={{ color: "#aba6a6", fontSize: 35, textAlign: "right" }}>

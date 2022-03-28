@@ -12,6 +12,7 @@ import {
   load_buttons,
   delete_value,
   get_result,
+  clear_screen
 } from "../redux/calculator/actions/actions";
 
 const windowWidth = Dimensions.get("window").width;
@@ -241,6 +242,7 @@ export default function Keyboard() {
       >
         <Pressable
           onPress={() => dispatch(delete_value())}
+          onLongPress={() => dispatch(clear_screen())}
           style={({ pressed }) => [
             {
               backgroundColor: pressed ? "#434345" : "#212120",
