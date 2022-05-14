@@ -14,6 +14,7 @@ import {
   get_result,
   clear_screen
 } from "../redux/calculator/actions/actions";
+import Keyboard2 from './Keyborad2'
 
 const windowWidth = Dimensions.get("window").width;
 const windowHeight = Dimensions.get("window").height;
@@ -26,6 +27,7 @@ export default function Keyboard() {
       style={{
         flexDirection: "row",
         height: windowHeight / 1.4,
+       
       }}
     >
       <ScrollView
@@ -321,12 +323,7 @@ export default function Keyboard() {
           <Text style={styles.text3}>+</Text>
         </Pressable>
       </View>
-
-      <ScrollView
-        style={{
-          backgroundColor: "#b05d04",
-        }}
-      ></ScrollView>
+          <Keyboard2 />
     </View>
   );
 }

@@ -20,6 +20,7 @@ export default function Screen(props: any) {
         backgroundColor: "black",
         height: screenHeight,
         width: windowWidth,
+        
       }}
     >
       <View
